@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<div>  
+  <% if @categories.empty? %>
+      <p>no categories</p>      
+    <% end %>
+  <% @categories.each do |category| %>
+    
+    <div>
+      <div>
+        <img src="<%= category.icon %>" alt='category-icon' />
+        <p><%=link_to category.name, category_transactions_path(category) %></p>
+      </div>
+      <p>$<%= Transaction.where(category_id: category.id).sum(:amount) %> </p>
+     
+    </div>
+    
+  <% end %>
+</div>
+
+<%= link_to "New category", new_category_path %>
