@@ -1,21 +1,23 @@
-<div>
+<% @page_name ='Transactions' %>
+
+<div class='transactions'>
   <% if @transactions.empty? %>
       <p>no transaction</p>         
   <% end %>
 
- <div class="total">
-  <h3>Total:</h3>
-  <h3>$<%= Transaction.where(category_id: @id).reduce(0) { |sum, t| sum + t.amount }  %></h3>
-</div>
+  <div class="total"> 
+    <h3>Total: $<%= Transaction.where(category_id: @id).reduce(0) { |sum, t| sum + t.amount }  %></h3>
+  </div>
   <% @transactions.each do |transaction| %>
     
-    <div>
-      <p><%= transaction.name %></p>
+    <div class='card'>
+      <p class='name'><%= transaction.name%></p>
       <p>$<%= transaction.amount %></p>
     </div>
   <% end %>
-    <div>
-      <%= link_to "Back", categories_path %>
-    </div>
-    <%= link_to "new transaction", new_category_transaction_path %>
+
+  <div >
+    <%= link_to "Back to categories", categories_path, class: "back-page" %>     
+  </div>
 </div>
+<%= link_to "New transaction", new_category_transaction_path, class: 'btn' %>
