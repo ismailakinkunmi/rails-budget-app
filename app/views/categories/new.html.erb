@@ -1,22 +1,27 @@
-
-<%= form_with model: @category do |f| %> 
-  <div>
-    <%= f.label :name %><br>
-    <%= f.text_field :name, autocomplete: 'name', autofocus: true %>
-     <% @category.errors.full_messages_for(:name).each do |message| %>
-      <div class='error-message'><%= message %></div>
-    <% end %>
+<% @page_name = 'New Categories' %>
+<div class='category-form'>
+  <%= form_with model: @category do |f| %> 
+    <div>
+      <%= f.label :name %><br>
+      <%= f.text_field :name, autocomplete: 'name', autofocus: true %>
+      <% @category.errors.full_messages_for(:name).each do |message| %>
+        <div class='error-message'><%= message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= f.label :icon %><br>
+      <%= f.text_field :icon, autocomplete: 'icon', autofocus: true %>
+      <% @category.errors.full_messages_for(:icon).each do |message| %>
+        <div class='error-message'><%= message %></div>
+      <% end %>
+    </div>
+    
+    <div>
+      <%= f.submit %>
+    </div>
+  <% end %>
+    <div >
+    <%= link_to "Back to categories", categories_path, class: "back-page" %>     
   </div>
-  <div>
-    <%= f.label :icon %><br>
-    <%= f.text_field :icon, autocomplete: 'icon', autofocus: true %>
-     <% @category.errors.full_messages_for(:icon).each do |message| %>
-      <div class='error-message'><%= message %></div>
-    <% end %>
-  </div>
-  
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
 
