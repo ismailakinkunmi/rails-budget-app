@@ -1,16 +1,18 @@
+<% @page_name = 'Categories' %>
 <p style="color: green"><%= notice %></p>
 
-<div>  
+<div class='categories'>  
   <% if @categories.empty? %>
       <p>no categories</p>      
     <% end %>
   <% @categories.each do |category| %>
     
-    <div>
-      <div>
+    <div class='card'> 
+      <div class='category-details'>
         <img src="<%= category.icon %>" alt='category-icon' />
-        <p><%=link_to category.name, category_transactions_path(category) %></p>
-      </div>
+        <%=link_to category.name, category_transactions_path(category.id), class:'name' %>
+      </div>       
+      
       <p>$<%= Transaction.where(category_id: category.id).sum(:amount) %> </p>
      
     </div>
@@ -18,4 +20,4 @@
   <% end %>
 </div>
 
-<%= link_to "New category", new_category_path %>
+<%= link_to "New category", new_category_path, class: 'btn' %>
