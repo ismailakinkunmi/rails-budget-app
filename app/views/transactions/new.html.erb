@@ -1,7 +1,7 @@
 <% @page_name = "New Transaction" %>
 <% @back = category_transactions_path(@id)%>
 
-<div >
+<div class='transaction-form'>
   <%= form_with url: category_transactions_path, scope: :transaction  do |f| %>
     <div class="field">
       <%= f.label :name %><br />
@@ -20,4 +20,8 @@
 
     <%= f.submit "Create Transaction" %>
   <% end %>
+
+    <div >
+    <%= link_to "Back to transaction", category_transactions_path, class: "back-page" %>     
+  </div>
 </div>
