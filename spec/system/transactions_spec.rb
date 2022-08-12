@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Transactions", type: :feature do
+RSpec.describe 'Transactions', type: :feature do
   before(:each) do
     @user = User.new(name: 'Testing', email: 'user@example.com', password: 'password')
     @user.save
@@ -28,10 +28,9 @@ RSpec.describe "Transactions", type: :feature do
   it 'renders total amount' do
     expect(page).to have_content 'Total'
   end
-
 end
 
-RSpec.describe "Transactions", type: :feature do
+RSpec.describe 'Transactions', type: :feature do
   before(:each) do
     @user = User.new(name: 'Testing', email: 'user@example.com', password: 'password')
     @user.save
@@ -59,6 +58,4 @@ RSpec.describe "Transactions", type: :feature do
   it 'renders Back to transaction' do
     expect(page).to have_content @category.name
   end
-
 end
-

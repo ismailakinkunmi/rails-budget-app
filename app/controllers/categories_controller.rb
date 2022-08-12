@@ -15,10 +15,11 @@ class CategoriesController < ApplicationController
       redirect_to categories_path, status: :see_other
     else
       render :new, status: :unprocessable_entity
-    end    
+    end
   end
 
   private
+
   def category_params
     params.require(:category).permit(:name, :icon)
   end

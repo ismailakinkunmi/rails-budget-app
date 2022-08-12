@@ -17,10 +17,8 @@ RSpec.describe 'CategoriesIndexPage', type: :feature do
   end
   it 'renders category name' do
     expect(page).to have_content @category.name
-  end 
-
+  end
 end
-
 
 RSpec.describe 'CategoriesNewPage', type: :feature do
   before(:each) do
@@ -42,6 +40,5 @@ RSpec.describe 'CategoriesNewPage', type: :feature do
   end
   it 'renders label Name' do
     expect(page).to have_content 'Name'
-  end    
-  
+  end
 end
