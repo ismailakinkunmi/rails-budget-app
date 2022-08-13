@@ -4,6 +4,10 @@
 
 This is a ruby on rails mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what
 
+## Live link
+
+[https://budgetapp-1.herokuapp.com/](https://budgetapp-1.herokuapp.com/)
+
 ## Video
 
 you can watch the presentation video [here](https://www.loom.com/share/3256f5b285d448c882008e6886ded3a6).
