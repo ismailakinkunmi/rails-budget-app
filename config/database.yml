@@ -24,4 +24,4 @@ test:
 
 production:
   <<: *default
-  database: budget-app
+  database: budget-dev
