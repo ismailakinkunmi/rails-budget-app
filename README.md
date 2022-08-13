@@ -6,7 +6,7 @@ This is a ruby on rails mobile web application where you can manage your budget:
 
 ## Live link
 
-[https://budgetapp-1.herokuapp.com/](https://budgetapp-1.herokuapp.com/).
+[https://budgetapp-1.herokuapp.com/](https://budgetapp-1.herokuapp.com/)
 
 ## Video
 
