@@ -3,6 +3,7 @@
 ## Description
 
 This is a ruby on rails mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what
+![Screenshot (200)](https://user-images.githubusercontent.com/37457094/188992488-27c28402-4bc7-498c-9477-3f560060a2dd.png)
 
 ## Live link
 
